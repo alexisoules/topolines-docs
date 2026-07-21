@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Help & troubleshooting
+    url: https://www.topolines.app/help
+    about: Common issues and fixes.
+  - name: Try TopoLines
+    url: https://www.topolines.app/app
+    about: Open the editor — free, no account needed.
