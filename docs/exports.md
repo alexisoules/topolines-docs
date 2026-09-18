@@ -4,7 +4,7 @@
 
 | Format | Resolution | Plan |
 |---|---|---|
-| **PNG — Low** | 1024 px | Free, no account |
+| **PNG — Low** | 1024 px | Free (Google sign-in) |
 | **PNG — Medium** | 2048 px | Paid |
 | **PNG — High** | 3200 px | Paid |
 | **SVG** | Vector (resolution-independent) | Paid |
@@ -15,7 +15,7 @@
 
 Raster output. Transparent background supported. Good for web, mockups, social, and anything where you don't need to edit the lines afterwards.
 
-The **free tier exports a real 1024 px PNG with no account** — enough to judge the output properly, and usable as-is for plenty of work.
+The **free tier exports a real 1024 px PNG** — sign in with a free Google account (no payment) — enough to judge the output properly, and usable as-is for plenty of work.
 
 ### SVG
 

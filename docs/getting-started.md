@@ -1,6 +1,6 @@
 # Getting started
 
-Your first contour map takes about a minute. No account needed.
+Your first contour map takes about a minute. All you need is a free Google account.
 
 ## 1. Open the editor
 
