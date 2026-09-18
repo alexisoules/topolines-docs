@@ -34,7 +34,7 @@ It was built by a brand/UX designer who needed it for client work: the existing 
 - 📎 **CAD & GIS exports** — DXF for plotters and laser cutters, GeoJSON in the output CRS of your choice
 - 🖼️ **HD PNG export** — up to 3200 px
 - 🧩 **Figma plugin** — generate contours without leaving your canvas
-- 🆓 **Free tier that actually exports** — sign in with a free Google account and download a real PNG, no payment
+- 🆓 **Free tier that actually exports** — sign in with a free Google or GitHub account and download a real PNG, no payment
 
 ## Gallery
 
@@ -70,7 +70,7 @@ Feature requests are genuinely read and prioritised — several shipped features
 
 ## Pricing
 
-Free to try — just sign in with a Google account, no payment. Paid features (HD PNG, SVG / DXF / GeoJSON export, 5–10 m data, DEM upload, larger areas) run on one-off credit packs — **no subscription**, and credits never expire.
+Free to try — just sign in with a Google or GitHub account, no payment. Paid features (HD PNG, SVG / DXF / GeoJSON export, 5–10 m data, DEM upload, larger areas) run on one-off credit packs — **no subscription**, and credits never expire.
 
 See [current pricing](https://www.topolines.app/#pricing).
 
