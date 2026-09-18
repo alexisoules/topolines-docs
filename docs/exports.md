@@ -8,6 +8,8 @@
 | **PNG — Medium** | 2048 px | Paid |
 | **PNG — High** | 3200 px | Paid |
 | **SVG** | Vector (resolution-independent) | Paid |
+| **DXF** | Vector (CAD) | Paid |
+| **GeoJSON** | Vector (georeferenced) | Paid |
 
 ### PNG
 
@@ -26,6 +28,14 @@ Vector output: every contour is a real path. This is the format to use if you wa
 
 There's a **Flatten** option that merges all contours into a single path, so the file imports as one clean block in design tools instead of hundreds of nested groups.
 
+### DXF (CAD)
+
+Vector output for the CAD / fabrication world — every contour is a polyline. Import into CAD software, or send straight to a **laser cutter**, plotter or CNC toolpath. Handy when your workflow lives in DXF rather than SVG.
+
+### GeoJSON
+
+Georeferenced vector output for **GIS**. Contours keep their real-world coordinates, so the file lines up with other layers in QGIS, ArcGIS or a web map. You can choose the **output projection** — Web Mercator, Lambert-93, UTM and other national CRS — so the export matches your project's coordinate system.
+
 ## Credits
 
 Paid exports run on **one-off credit packs** — there's no subscription, and **credits never expire**.
@@ -33,16 +43,17 @@ Paid exports run on **one-off credit packs** — there's no subscription, and **
 The cost of an export depends on:
 
 - the **area** of the zone (bigger zone = more data to process)
-- the **elevation resolution** (10 m GeoTIFF costs more than 30 m SRTM)
+- the **elevation resolution** (5–10 m national data costs more than the 30 m standard source)
 
 The exact credit cost is shown before you confirm an export, and your remaining balance is always visible in the editor.
 
 See [current packs and prices](https://www.topolines.app/#pricing).
 
-## Resolution: SRTM 30 m vs GeoTIFF 10 m
+## Resolution: standard 30 m vs national 5–10 m
 
-- **SRTM 30 m** (free) — global coverage, one sample every ~30 m. Great for most design work; the difference is invisible at poster scale for large areas.
-- **GeoTIFF 10 m** (paid) — three times finer. Worth it for small zones where you want fine detail: a single valley, an urban relief, a detailed coastline.
+- **GEDTM30 30 m** (free) — global bare-earth coverage, one sample every ~30 m. Great for most design work; the difference is invisible at poster scale for large areas.
+- **National 5–10 m** (paid) — up to six times finer, from national datasets where available (IGN France 5 m, USGS 3DEP 10 m, IGN España 5 m). Worth it for small zones where you want fine detail: a single valley, an urban relief, a detailed coastline.
+- **Your own DEM** (paid) — upload a GeoTIFF and trace contours on it directly, for survey data or areas the built-in sources don't cover.
 
 ## Area limits
 

@@ -20,16 +20,18 @@ TopoLines is a web tool for designers and makers. Search any location, drag a bo
 
 It was built by a brand/UX designer who needed it for client work: the existing options were either professional GIS suites with a steep learning curve, or one-off files you can't edit afterwards.
 
-**Every map comes from real elevation data** — SRTM 30 m or 10 m GeoTIFF — not from a procedural pattern generator.
+**Every map comes from real elevation data** — GEDTM30 bare-earth worldwide, or 5–10 m national datasets — not from a procedural pattern generator.
 
 ## Features
 
-- 🌍 **Real elevation data** — SRTM 30 m worldwide, 10 m GeoTIFF on paid tiers
+- 🌍 **Real elevation data** — GEDTM30 30 m bare-earth worldwide, plus 5–10 m national sources (IGN France, USGS 3DEP, IGN España) on paid tiers
+- 📤 **Bring your own DEM** — upload a GeoTIFF and trace contours on your own raster (Pro)
 - 🎚️ **Fully parametric** — contour interval in metres, simplification, stroke width, line joins
 - 🎨 **Elevation-driven colour** — gradient stops mapped from lowest to highest contour
 - 〰️ **Stroke taper** — line weight varies with altitude for a hand-drawn feel
 - 🌊 **Real coastlines** — clipped against OpenStreetMap shorelines, so lines never float out to sea
 - 📐 **Clean SVG export** — opens as editable paths in Figma and Illustrator, no cleanup needed
+- 📎 **CAD & GIS exports** — DXF for plotters and laser cutters, GeoJSON in the output CRS of your choice
 - 🖼️ **HD PNG export** — up to 3200 px
 - 🧩 **Figma plugin** — generate contours without leaving your canvas
 - 🆓 **Free tier that actually exports** — no account needed to download a real PNG
@@ -68,7 +70,7 @@ Feature requests are genuinely read and prioritised — several shipped features
 
 ## Pricing
 
-Free to try, no account required. Paid features (HD PNG, SVG export, 10 m data, larger areas) run on one-off credit packs — **no subscription**, and credits never expire.
+Free to try, no account required. Paid features (HD PNG, SVG / DXF / GeoJSON export, 5–10 m data, DEM upload, larger areas) run on one-off credit packs — **no subscription**, and credits never expire.
 
 See [current pricing](https://www.topolines.app/#pricing).
 
