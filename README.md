@@ -24,13 +24,16 @@ It was built by a brand/UX designer who needed it for client work: the existing 
 
 ## Features
 
+- ✳️ **Two render modes** — classic contour **Lines**, or **Points**: the same terrain as a field of dots, squares or crosses whose size follows the height
+- 🗺️ **Printed-map conventions** — auxiliary contours on flat ground, depression hachures, contour labels that cut the line, scale bar, north arrow and legend on exports
 - 🌍 **Real elevation data** — GEDTM30 30 m bare-earth worldwide, plus 5–10 m national sources (IGN France, USGS 3DEP, IGN España) on paid tiers
 - 📤 **Bring your own DEM** — upload a GeoTIFF and trace contours on your own raster (Pro)
 - 🎚️ **Fully parametric** — contour interval in metres, simplification, stroke width, line joins
 - 🎨 **Elevation-driven colour** — gradient stops mapped from lowest to highest contour
 - 〰️ **Stroke taper** — line weight varies with altitude for a hand-drawn feel
 - 🌊 **Real coastlines** — clipped against OpenStreetMap shorelines, so lines never float out to sea
-- 📐 **Clean SVG export** — opens as editable paths in Figma and Illustrator, no cleanup needed
+- 🧭 **A basemap made for contour work** — vector map in light and dark, with terrain colours, relief shading and standard map symbols
+- 📐 **Clean SVG export** — opens as editable paths in Figma and Illustrator, every layer a named group (`contour-lines`, `annotations`, `contour-labels`…), no cleanup needed
 - 📎 **CAD & GIS exports** — DXF for plotters and laser cutters, GeoJSON in the output CRS of your choice
 - 🖼️ **HD PNG export** — up to 3200 px
 - 🧩 **Figma plugin** — generate contours without leaving your canvas
@@ -53,7 +56,9 @@ More: [topolines.app/topographic-map](https://www.topolines.app/topographic-map)
 | Guide | What's in it |
 |---|---|
 | [Getting started](docs/getting-started.md) | Your first map in under a minute |
-| [Contour settings](docs/contour-settings.md) | Interval, relative mode, simplification, taper, gradient |
+| [Contour settings](docs/contour-settings.md) | Interval, relative mode, simplification, taper, gradient, annotations |
+| [Render modes](docs/render-modes.md) | Lines vs Points, and every Points control |
+| [Cartographic options](docs/cartographic-options.md) | Auxiliary & depression contours, labels, Imhof presets, scale bar / north arrow / legend |
 | [Exports & credits](docs/exports.md) | PNG tiers, SVG, how credits are calculated |
 | [Figma plugin](docs/figma-plugin.md) | Generating contours inside Figma |
 | [Data sources](docs/data-sources.md) | Where the elevation and coastline data comes from |

@@ -22,6 +22,8 @@ The zone's surface area is displayed under it. If it turns **red**, the area exc
 
 Hit **Generate Contours**. TopoLines fetches the elevation data for that exact bounding box and traces the contour lines.
 
+The **Render** switch at the top of Settings flips between contour **Lines** and **Points** instantly — see [Render modes](render-modes.md). The eye button opens a full-size preview of the trace.
+
 ## 5. Tune the look
 
 Everything is adjustable live — see [Contour settings](contour-settings.md):
@@ -29,7 +31,7 @@ Everything is adjustable live — see [Contour settings](contour-settings.md):
 - **Contour Interval** — vertical distance between lines, in metres
 - **Simplification** — smooths jagged, pixel-faithful lines
 - **Stroke** — colour or elevation gradient, width, joins, taper
-- **Annotations** — optional summits, rivers, place labels
+- **Annotations** — optional summits, rivers, place labels, contour labels, auxiliary contours, depression ticks
 - **Background** — colour or transparent
 
 ## 6. Export

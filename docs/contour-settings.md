@@ -47,7 +47,7 @@ The classic hypsometric preset runs blue → green → yellow → red, which rea
 
 ## Annotations
 
-Optional layers drawn in the stroke colour and included in the SVG export:
+Optional layers, included in the SVG export. Each one can be **linked to the stroke** (on by default) so it follows the contour colour and opacity; unlink it to style it on its own:
 
 - Summits and peaks
 - Rivers and water features
@@ -56,10 +56,12 @@ Optional layers drawn in the stroke colour and included in the SVG export:
 
 Annotations are fetched from OpenStreetMap and only appear once contours are generated.
 
+Contour labels, auxiliary contours and depression ticks live in the same Annotations list — see [Cartographic options](cartographic-options.md).
+
 ## Background
 
 Flat colour, or **transparent** — useful when you want to composite the contours over your own artwork in Figma.
 
 ---
 
-**Next:** [Exports & credits →](exports.md)
+**Next:** [Render modes →](render-modes.md)

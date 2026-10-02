@@ -2,6 +2,25 @@
 
 Notable user-facing changes to TopoLines.
 
+## TopoLines 2.0 — October 2026
+
+*Two readings of one terrain.*
+
+- **Points render mode** — draw the terrain as a field of dots, squares or crosses whose density and size follow the height. Same data as the contours, one switch. Controls for density, shape, min/max size and placement (from an ordered halftone grid to a hand-stippled scatter). See [Render modes](docs/render-modes.md).
+- **Printed-map conventions** — auxiliary (dashed half-interval) contours on flat ground, inward hachures on depression rings, a minimum contour length filter, and contour labels that cut the line beneath them. See [Cartographic options](docs/cartographic-options.md).
+- **Scale bar, north arrow and legend** on PNG and SVG exports, drawn in a margin band below the map (Pro).
+- **Annotation layers** — summits, rivers, places, contour labels, auxiliary contours and depression ticks are now layers, and each can follow the contour colour (on by default; with a gradient, depression ticks take the colour of their contour).
+- **Trace preview** — open the live trace full size, on a black or white background, and export from there.
+- **New basemap** — a vector map in light and dark drawn for contour work: forests, meadows, farmland, rock and ice in distinct colours, soft relief shading, and standard symbols for peaks, passes, huts, lifts and airports.
+- **Smarter search** — results show what kind of place they are, and real places rank above same-named streets.
+- **Off-screen zones** — a thin line on the edge of the map points to zones you've scrolled away from; click it to fly back.
+- **Index contours free for everyone**, and on by default.
+- **Two Imhof-style hypsometric gradient presets** (Pro).
+- **Cleaner SVG for Figma** — every layer imports as a named group instead of "Group".
+- **Guided tour in chapters** — Basics, Go further, What's new — plus *New* tags on new controls that disappear once used.
+- **Redesigned website**, user docs and a public changelog at [topolines.app/changelog](https://www.topolines.app/changelog).
+- The **Figma plugin** now draws auxiliary contours and depression hachures (Points is not in the plugin yet).
+
 ## September 2026
 
 - **CAD & GIS vector exports** — export contours as **DXF** (for CAD, plotters and laser cutters) and **GeoJSON**, alongside SVG. GeoJSON can be written in the **output projection of your choice** (Lambert-93, UTM, and other national CRS) so it drops straight into a GIS project.
