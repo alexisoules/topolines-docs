@@ -10,8 +10,11 @@ leave large areas with no line at all. **Auxiliary contours** fill those gaps
 with a dashed line at half the interval, drawn only where the terrain is
 locally flat, never across slopes that already have enough lines.
 
-- Toggle: **Auxiliary contours** in the Stroke section, **On** by default.
-- Changing it re-traces the zone.
+- Add **Auxiliary contours** from the Annotations **+** menu; hide or remove the
+  layer to turn them off. Adding or showing the layer re-traces the zone.
+- Its settings set the **colour** (linked to the contour stroke by default),
+  **style** (dashed or solid), **dash** and **gap** lengths, **dash cap** and
+  **width**.
 - In GeoJSON exports they carry `type: "auxiliary"`; in DXF they sit on their
   own `CONTOUR_AUXILIARY` layer, so you can hide or restyle them.
 
@@ -19,8 +22,12 @@ locally flat, never across slopes that already have enough lines.
 
 A closed contour around a pit (a sinkhole, a crater, a quarry) looks exactly
 like one around a hill. TopoLines detects the depressions and marks their
-rings with short **hachures pointing inward**, downhill. This is automatic and
-has no setting.
+rings with short **hachures pointing inward**, downhill.
+
+Add **Depression ticks** from the Annotations **+** menu. Their settings set the
+**colour** (linked to the contour stroke by default — with a gradient, each tick
+takes the colour of its contour), and the tick **length**, **width** and
+**spacing** along the ring.
 
 ## Minimum contour length
 
