@@ -26,7 +26,7 @@ It was built by a brand/UX designer who needed it for client work: the existing 
 
 - ✳️ **Two render modes** — classic contour **Lines**, or **Points**: the same terrain as a field of dots, squares or crosses whose size follows the height
 - 🗺️ **Printed-map conventions** — auxiliary contours on flat ground, depression hachures, contour labels that cut the line, scale bar, north arrow and legend on exports
-- 🌍 **Real elevation data** — GEDTM30 30 m bare-earth worldwide, plus 5–10 m national sources (IGN France, USGS 3DEP, IGN España) on paid tiers
+- 🌍 **Real elevation data** — GEDTM30 30 m bare-earth worldwide, plus 5–10 m national sources (France, USA, Spain, England, Austria, Switzerland, Italy, and Bavaria + NRW in Germany) on paid tiers
 - 📤 **Bring your own DEM** — upload a GeoTIFF and trace contours on your own raster (Pro)
 - 🎚️ **Fully parametric** — contour interval in metres, simplification, stroke width, line joins
 - 🎨 **Elevation-driven colour** — gradient stops mapped from lowest to highest contour

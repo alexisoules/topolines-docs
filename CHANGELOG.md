@@ -2,6 +2,11 @@
 
 Notable user-facing changes to TopoLines.
 
+## National elevation data — October 2026
+
+- **Five more national terrain models** for HD exports, picked automatically for your zone: England (Environment Agency LIDAR, 5 m), Austria (BEV, 5 m), Switzerland (swisstopo swissALTI3D, 5 m), Italy (INGV TINITALY, 10 m, Sicily and Sardinia included) and Germany (Bavaria and North Rhine-Westphalia DGM1, 5 m — more states to follow). See [Data sources](docs/data-sources.md).
+- **Large zones stay national** — traced on the same national model at 10–30 m instead of falling back to the worldwide source.
+
 ## TopoLines 2.0 — October 2026
 
 *Two readings of one terrain.*

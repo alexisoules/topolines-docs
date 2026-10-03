@@ -7,7 +7,7 @@ TopoLines renders **real terrain**. Nothing is procedurally invented. Here's exa
 TopoLines picks the best available elevation source for your area:
 
 - **GEDTM30** — a global **bare-earth** model at ~30 m, which represents the ground surface under forest canopy rather than treetops. This is the standard, free source worldwide.
-- **National high-resolution datasets** — ~5–10 m where available, used on paid tiers: **IGN RGE ALTI 5 m** (France), **USGS 3DEP 10 m** (USA), **IGN España MDT 5 m** (Spain), with more added over time. The editor's Map info panel shows which source a map was traced from.
+- **National high-resolution datasets** — ~5–10 m where available, used on paid tiers: **IGN RGE ALTI 5 m** (France), **USGS 3DEP 10 m** (USA), **IGN España MDT 5 m** (Spain), **Environment Agency LIDAR 5 m** (England), **BEV ALS 5 m** (Austria), **swisstopo swissALTI3D 5 m** (Switzerland), **INGV TINITALY 10 m** (Italy) and **DGM1 5 m** for Bavaria and North Rhine-Westphalia (Germany), with more added over time. A zone that crosses a border uses the worldwide source (one dataset per map, never stitched); a large zone inside one country stays on its national model at a coarser 10–30 m grid. The editor's Map info panel shows which source a map was traced from.
 - **Your own GeoTIFF** — on paid tiers you can upload your own DEM and trace contours on it directly, for survey data or areas the built-in sources don't cover.
 
 Contour lines are traced from that elevation grid at the interval you choose.
