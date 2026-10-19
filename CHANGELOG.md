@@ -2,6 +2,12 @@
 
 Notable user-facing changes to TopoLines.
 
+## Data documentation — October 2026
+
+- **USGS 3DEP is now labelled "up to 5 m"** — US zones are served on a 5 m grid from 1 m or 1/9″ lidar where it has been flown, and from the ~10 m product elsewhere.
+- **Large-zone behaviour, corrected** — England, Austria, Italy, Switzerland and the German states coarsen their grid to stay national; France, Spain and the US are served at 5 m up to about 75 km², then fall back to the worldwide 10 m source. The editor shows the source and grid before you generate.
+- **Docs now list every dataset** with its publisher, resolution, coverage and licence, and the output CRS options for GeoJSON and DXF. See [Data sources](docs/data-sources.md).
+
 ## National elevation data — October 2026
 
 - **Five more national terrain models** for HD exports, picked automatically for your zone: England (Environment Agency LIDAR, 5 m), Austria (BEV, 5 m), Switzerland (swisstopo swissALTI3D, 5 m), Italy (INGV TINITALY, 10 m, Sicily and Sardinia included) and Germany (Bavaria and North Rhine-Westphalia DGM1, 5 m — more states to follow). See [Data sources](docs/data-sources.md).

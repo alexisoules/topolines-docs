@@ -6,7 +6,7 @@ Generate contour maps without leaving your Figma canvas.
 
 The plugin connects to your TopoLines account and drops generated contours straight into your file — as a **vector layer** you can restyle like any other Figma frame.
 
-Useful when contours are one element of a larger composition (a poster, a brand board, a UI mockup) and you don't want to round-trip through the web app and a file import.
+Useful when contours are one element of a larger composition (a layout, a site plan board, a UI mockup) and you don't want to round-trip through the web app and a file import.
 
 ## Setup
 

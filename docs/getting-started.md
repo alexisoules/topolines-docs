@@ -20,7 +20,7 @@ The zone's surface area is displayed under it. If it turns **red**, the area exc
 
 ## 4. Generate
 
-Hit **Generate Contours**. TopoLines fetches the elevation data for that exact bounding box and traces the contour lines.
+Hit **Generate Contours**. TopoLines picks the best elevation model covering that zone (shown in the Map info panel), fetches it for that exact bounding box and traces the contour lines.
 
 The **Render** switch at the top of Settings flips between contour **Lines** and **Points** instantly — see [Render modes](render-modes.md). The eye button opens a full-size preview of the trace.
 
@@ -38,8 +38,9 @@ Everything is adjustable live — see [Contour settings](contour-settings.md):
 
 Choose your format and hit **Export Selected**. See [Exports & credits](exports.md) for what's included in each tier.
 
+- **GeoJSON** / **DXF** — georeferenced vectors for GIS and CAD, in the CRS of your choice (paid)
+- **SVG** — vector paths for Figma, Illustrator or laser cutting (paid)
 - **PNG** — 1024 px free, up to 3200 px on paid tiers
-- **SVG** — vector paths, paid tier, ready for Figma / Illustrator / laser cutting
 
 ---
 

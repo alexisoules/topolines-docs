@@ -13,7 +13,7 @@
 
 ### PNG
 
-Raster output. Transparent background supported. Good for web, mockups, social, and anything where you don't need to edit the lines afterwards.
+Raster output, 1024, 2048 or 3200 px wide. Transparent background supported. Good for reports, slides, the web, and anything where you don't need to edit the lines afterwards.
 
 The **free tier exports a real 1024 px PNG** — sign in with a free Google or GitHub account (no payment) — enough to judge the output properly, and usable as-is for plenty of work.
 
@@ -30,11 +30,19 @@ There's a **Flatten** option that merges all contours into a single path, so the
 
 ### DXF (CAD)
 
-Vector output for the CAD / fabrication world — every contour is a polyline. Import into CAD software, or send straight to a **laser cutter**, plotter or CNC toolpath. Handy when your workflow lives in DXF rather than SVG.
+Vector output for CAD and fabrication — every contour is a polyline, with **one layer per contour type** (index, intermediate, auxiliary, coastline), in the output CRS of your choice. Import into AutoCAD, Rhino or other CAD software for site studies, or send it to a **laser cutter**, plotter or CNC toolpath.
 
 ### GeoJSON
 
-Georeferenced vector output for **GIS**. Contours keep their real-world coordinates, so the file lines up with other layers in QGIS, ArcGIS or a web map. You can choose the **output projection** — Web Mercator, Lambert-93, UTM and other national CRS — so the export matches your project's coordinate system.
+Georeferenced vector output for **GIS**. Contours keep their real-world coordinates, so the file lines up with other layers in QGIS, ArcGIS or a web map. Each feature carries its **elevation** and its **contour type** (`index`, `intermediate`, `auxiliary`, `coastline`).
+
+### Output CRS (GeoJSON and DXF)
+
+Choose the coordinate system the file is written in: WGS 84 (EPSG:4326, default), automatic UTM zone, Lambert-93 (EPSG:2154), Web Mercator (EPSG:3857), British National Grid (EPSG:27700), or ETRS89 / UTM 30N and 31N (EPSG:25830, EPSG:25831). See [Data sources](data-sources.md#coordinate-systems).
+
+### Source metadata
+
+PNG and vector exports embed the elevation dataset that served the zone and its licence credit, so the file documents where its contours came from.
 
 ## Credits
 
@@ -47,17 +55,17 @@ The cost of an export depends on:
 
 The exact credit cost is shown before you confirm an export, and your remaining balance is always visible in the editor.
 
-See [current packs and prices](https://www.topolines.app/#pricing).
+See [current packs and prices](https://www.topolines.app/pricing).
 
 ## Resolution: standard 30 m vs national 5–10 m
 
-- **GEDTM30 30 m** (free) — global bare-earth coverage, one sample every ~30 m. Great for most design work; the difference is invisible at poster scale for large areas.
-- **National 5–10 m** (paid) — up to six times finer, from national datasets where available (IGN France 5 m, USGS 3DEP 10 m, IGN España 5 m). Worth it for small zones where you want fine detail: a single valley, an urban relief, a detailed coastline.
+- **GEDTM30 30 m** (free) — global bare-earth coverage, one sample every ~30 m. Good for regional relief and large zones.
+- **National 5–10 m** (paid) — up to six times finer, mostly lidar-derived, in France, the US, Spain, England, Austria, Switzerland, Italy, Bavaria and North Rhine-Westphalia (see [Data sources](data-sources.md)). Worth it for small zones and site work: a single valley, a building plot, a detailed coastline.
 - **Your own DEM** (paid) — upload a GeoTIFF and trace contours on it directly, for survey data or areas the built-in sources don't cover.
 
 ## Area limits
 
-Each zone has a maximum surface area, which is higher on paid plans. This exists to keep generation fast and reliable — very large areas produce enormous files with little visual gain.
+Each zone has a maximum surface area: 100 km² on the free plan, 2000 km² on paid plans (500 km² for vector exports). This keeps generation fast and reliable.
 
 If your zone exceeds the limit it turns red in the editor. Either shrink it, or split your subject into several zones (they can be exported together).
 

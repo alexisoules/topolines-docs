@@ -2,13 +2,13 @@
 
 ### Can I use the maps commercially?
 
-Yes. Maps you generate are yours to use, including in client work and products you sell — posters, merchandise, brand identities, laser-cut pieces.
+Yes. Maps you generate are yours to use, including in client work, reports, publications and products you sell.
 
-If your map includes OpenStreetMap-derived features (coastlines, annotations), crediting "© OpenStreetMap contributors" is good practice. See [Data sources](data-sources.md).
+If your map includes OpenStreetMap-derived features (coastlines, annotations), credit "© OpenStreetMap contributors", and credit the elevation source where its licence asks for it — the credit is embedded in every export. See [Data sources](data-sources.md).
 
 ### Do I need an account to try it?
 
-No. You can generate a map and download a real 1024 px PNG anonymously. An account is only needed for paid features (HD PNG, SVG, 10 m data, larger areas).
+You need a free Google or GitHub sign-in — no payment. The free tier traces on GEDTM30 30 m and exports a real 1024 px PNG. Paid features (GeoJSON, DXF, SVG, HD PNG, 5–10 m data, your own DEM, larger areas) run on credits.
 
 ### Is it a subscription?
 
@@ -16,9 +16,9 @@ No. Credits are sold in one-off packs and **never expire**.
 
 ### How accurate is it?
 
-Contours are traced from real elevation data — ~30 m sampling on the free tier, ~10 m on paid. That's accurate enough for design, visualisation and print.
+Contours are only as accurate as the elevation model behind them, and TopoLines tells you which one that is. The free tier uses GEDTM30 (30 m, bare-earth); paid tiers use national terrain models at 5–10 m, mostly lidar, where available. TopoLines published a check of GEDTM30 against national lidar at eight sites: under forest its RMSE was 5–18 m, on farmland and in cities 1–5 m — see [GEDTM30 vs lidar](https://www.topolines.app/blog/gedtm30-vs-lidar).
 
-It is **not** a substitute for surveyed data. Don't use it for engineering, construction or navigation.
+For preliminary studies, site context and mapping it is a fast, documented source. It is **not** a substitute for a topographic survey: don't use it alone for engineering design, construction or navigation.
 
 ### Why does my map look empty / like a solid block?
 
@@ -34,7 +34,7 @@ TopoLines clips contours against the OpenStreetMap shoreline. If that lookup fai
 
 ### Can I import my own elevation data?
 
-Not currently. Importing a custom heightmap, DEM or terrain mesh is a known request on the roadmap — [add your vote or use case](../../issues).
+Yes, on paid tiers: upload a georeferenced GeoTIFF DEM and trace contours on it directly.
 
 ### Can I edit the SVG afterwards?
 
@@ -46,7 +46,7 @@ No. Exports contain only your generated contours and annotations. The basemap is
 
 ### Which projection is used?
 
-Web Mercator (EPSG:3857).
+Contours are traced in WGS 84. GeoJSON and DXF can be exported in WGS 84, an automatic UTM zone, Lambert-93, Web Mercator, British National Grid or ETRS89 UTM 30N / 31N. See [Data sources](data-sources.md#coordinate-systems).
 
 ---
 

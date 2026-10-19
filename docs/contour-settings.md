@@ -22,7 +22,7 @@ If your map looks like a solid block of ink, raise the interval. If it looks emp
 
 **On** — the interval adapts to the local relief so you get roughly the same *number* of lines whatever the terrain. Useful when you want a consistent visual density across a series of maps, and don't need the metres to be comparable.
 
-> Use **Off** for anything cartographically meaningful. Use **On** when you're producing a set of posters and want them to look consistent.
+> Use **Off** for anything cartographically meaningful. Use **On** when you're producing a series of maps and want them to look consistent.
 
 ## Simplification
 
@@ -37,7 +37,7 @@ Simplification smooths that out. At `0` you get pixel-faithful lines; higher val
 - **Colour** — a flat colour, or a **gradient** mapped to elevation (see below)
 - **Width** — line thickness in pixels
 - **Join** — how corners are drawn: `round` (softer) or `miter` (sharper)
-- **Taper** — line weight varies with altitude: thicker at low elevations, thinner at the top. Gives a hand-drawn, engraved feel.
+- **Taper** — line weight varies with altitude: thicker at low elevations, thinner at the top.
 
 ## Elevation gradient
 

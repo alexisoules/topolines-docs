@@ -2,9 +2,9 @@
 
 # TopoLines
 
-**Turn any place on Earth into topographic line art.**
+**Contour lines from sourced elevation data, anywhere on Earth.**
 
-Generate precise, fully customisable contour maps from real elevation data — and export them as clean SVG or HD PNG, ready for Figma, print, or laser cutting.
+Draw a zone, and TopoLines traces its contours from a named, citable elevation model — GEDTM30 30 m bare-earth worldwide, national lidar terrain models at 5–10 m, or your own GeoTIFF — then exports them as GeoJSON or DXF in your CRS, or as SVG and PNG.
 
 [**Open the app →**](https://www.topolines.app/app) · [Website](https://www.topolines.app) · [Browse maps](https://www.topolines.app/topographic-map) · [Blog](https://www.topolines.app/blog)
 
@@ -16,28 +16,48 @@ Generate precise, fully customisable contour maps from real elevation data — a
 
 ## What it is
 
-TopoLines is a web tool for designers and makers. Search any location, drag a box over it, and get the **real topography** of that area as editable vector paths.
+TopoLines covers the contour step of a QGIS / GDAL workflow — finding the right DEM, clipping it, tracing at your interval, cleaning DEM noise, reprojecting — without installing or configuring a GIS. Search a place, drag a box over it, and get its **real topography** as vector contours.
 
-It was built by a brand/UX designer who needed it for client work: the existing options were either professional GIS suites with a steep learning curve, or one-off files you can't edit afterwards.
+**Every line is a real elevation on a real place.** The dataset that served your zone is shown in the editor and written, with its licence credit, into the metadata of every export.
 
-**Every map comes from real elevation data** — GEDTM30 bare-earth worldwide, or 5–10 m national datasets — not from a procedural pattern generator.
+## Elevation data
+
+| Dataset | Publisher | Resolution | Coverage | Licence |
+|---|---|---|---|---|
+| GEDTM30 v1.2 (bare-earth DTM) | OpenGeoHub, via OpenTopography | 30 m | Worldwide | CC BY 4.0 |
+| Terrain Tiles (GeoTIFF) | Mapzen / Nextzen, AWS Open Data | ~10 m | Worldwide | Open data |
+| RGE ALTI® | IGN | 5 m | Metropolitan France | Etalab 2.0 |
+| 3DEP | U.S. Geological Survey | Up to 5 m (lidar where flown, ~10 m elsewhere) | United States | Public domain |
+| swissALTI3D | swisstopo | 5 m | Switzerland | Open data (attribution) |
+| LIDAR Composite DTM | Environment Agency | 5 m | England | OGL v3.0 |
+| MDT | Instituto Geográfico Nacional | 5 m | Spain | CC BY 4.0 |
+| ALS DTM Österreich | BEV | 5 m | Austria | CC BY 4.0 |
+| TINITALY/1.1 | INGV | 10 m | Italy | CC BY 4.0 |
+| DGM1 | Bavaria, North Rhine-Westphalia surveying agencies | 5 m | Bavaria, NRW | CC BY 4.0 / dl-de/zero-2.0 |
+| Your own GeoTIFF | You | Your file's | Your file | Yours |
+
+A national model is used only when the zone lies entirely inside its coverage — a map is never stitched from two datasets. Details and per-country limits: [Data sources](docs/data-sources.md).
 
 ## Features
 
-- ✳️ **Two render modes** — classic contour **Lines**, or **Points**: the same terrain as a field of dots, squares or crosses whose size follows the height
-- 🗺️ **Printed-map conventions** — auxiliary contours on flat ground, depression hachures, contour labels that cut the line, scale bar, north arrow and legend on exports
-- 🌍 **Real elevation data** — GEDTM30 30 m bare-earth worldwide, plus 5–10 m national sources (France, USA, Spain, England, Austria, Switzerland, Italy, and Bavaria + NRW in Germany) on paid tiers
-- 📤 **Bring your own DEM** — upload a GeoTIFF and trace contours on your own raster (Pro)
-- 🎚️ **Fully parametric** — contour interval in metres, simplification, stroke width, line joins
-- 🎨 **Elevation-driven colour** — gradient stops mapped from lowest to highest contour
-- 〰️ **Stroke taper** — line weight varies with altitude for a hand-drawn feel
-- 🌊 **Real coastlines** — clipped against OpenStreetMap shorelines, so lines never float out to sea
-- 🧭 **A basemap made for contour work** — vector map in light and dark, with terrain colours, relief shading and standard map symbols
-- 📐 **Clean SVG export** — opens as editable paths in Figma and Illustrator, every layer a named group (`contour-lines`, `annotations`, `contour-labels`…), no cleanup needed
-- 📎 **CAD & GIS exports** — DXF for plotters and laser cutters, GeoJSON in the output CRS of your choice
-- 🖼️ **HD PNG export** — up to 3200 px
+- 📐 **GIS & CAD exports** — **GeoJSON** (each feature carries its elevation and contour type) and **DXF** (one layer per contour type), in WGS 84, automatic UTM, Lambert-93, Web Mercator, British National Grid or ETRS89 UTM 30N / 31N
+- 🗺️ **Cartographic conventions** — index contours, auxiliary (half-interval) contours on flat ground, depression contours with inward hachures, contour labels cut into the line, scale bar, north arrow and legend
+- 🎚️ **Trace parameters** — contour interval down to 5 m, smoothing / simplification, minimum contour length filter to drop DEM-noise loops
+- 🌊 **Real coastlines** — contours clipped against OpenStreetMap shorelines (`natural=coastline`), so lines stop where the land does
+- 📤 **Bring your own DEM** — upload a georeferenced GeoTIFF and trace contours on your own raster (Pro)
+- ✳️ **Two render modes** — contour **Lines**, or **Points**: the same terrain as a field of dots, squares or crosses sized by height
+- 🎨 **Styling** — elevation gradients (including Imhof-style hypsometric presets), stroke taper, flat or transparent background
+- 🖊️ **SVG for design tools** — editable paths grouped by elevation, every layer a named group, pastes cleanly into Figma, Illustrator or Inkscape
+- 🖼️ **PNG** — 1024, 2048 or 3200 px wide
 - 🧩 **Figma plugin** — generate contours without leaving your canvas
-- 🆓 **Free tier that actually exports** — sign in with a free Google or GitHub account and download a real PNG, no payment
+- 🆓 **Free tier that actually exports** — sign in with Google or GitHub, GEDTM30 30 m, PNG 1024 px, no payment
+
+## Who uses it
+
+- **GIS and survey users** who need contours for an area quickly, with a named source and CRS
+- **Architects, landscape architects and engineers** doing site studies — DXF in a projected CRS, on 5 m lidar where available
+- **Cartographers and designers** who want editable, correctly sourced vectors
+- **Makers** cutting layered terrain models (one DXF/SVG layer per elevation)
 
 ## Gallery
 
@@ -59,9 +79,9 @@ More: [topolines.app/topographic-map](https://www.topolines.app/topographic-map)
 | [Contour settings](docs/contour-settings.md) | Interval, relative mode, simplification, taper, gradient, annotations |
 | [Render modes](docs/render-modes.md) | Lines vs Points, and every Points control |
 | [Cartographic options](docs/cartographic-options.md) | Auxiliary & depression contours, labels, Imhof presets, scale bar / north arrow / legend |
-| [Exports & credits](docs/exports.md) | PNG tiers, SVG, how credits are calculated |
+| [Exports & credits](docs/exports.md) | GeoJSON, DXF, SVG, PNG, output CRS, how credits are calculated |
 | [Figma plugin](docs/figma-plugin.md) | Generating contours inside Figma |
-| [Data sources](docs/data-sources.md) | Where the elevation and coastline data comes from |
+| [Data sources](docs/data-sources.md) | Elevation models, licences, source selection, coastlines, CRS |
 | [FAQ](docs/faq.md) | Licensing, commercial use, accuracy, limits |
 
 ## Feedback & feature requests
@@ -77,7 +97,7 @@ Feature requests are genuinely read and prioritised — several shipped features
 
 Free to try — just sign in with a Google or GitHub account, no payment. Paid features (HD PNG, SVG / DXF / GeoJSON export, 5–10 m data, DEM upload, larger areas) run on one-off credit packs — **no subscription**, and credits never expire.
 
-See [current pricing](https://www.topolines.app/#pricing).
+See [current pricing](https://www.topolines.app/pricing). Full documentation: [topolines.app/docs](https://www.topolines.app/docs).
 
 ---
 
