@@ -36,7 +36,7 @@ TopoLines covers the contour step of a QGIS / GDAL workflow — finding the righ
 | DGM1 | Bavaria, North Rhine-Westphalia surveying agencies | 5 m | Bavaria, NRW | CC BY 4.0 / dl-de/zero-2.0 |
 | Your own GeoTIFF | You | Your file's | Your file | Yours |
 
-A national model is used only when the zone lies entirely inside its coverage — a map is never stitched from two datasets. Details and per-country limits: [Data sources](docs/data-sources.md).
+A national model is used only when the zone lies entirely inside its coverage — a map is never stitched from two datasets. Details and per-country limits: [Data sources](docs/data-sources.md). Endpoints, native resolutions and access notes for each model: [Open national elevation models](docs/national-elevation-models.md).
 
 ## Features
 
@@ -82,6 +82,7 @@ More: [topolines.app/topographic-map](https://www.topolines.app/topographic-map)
 | [Exports & credits](docs/exports.md) | GeoJSON, DXF, SVG, PNG, output CRS, how credits are calculated |
 | [Figma plugin](docs/figma-plugin.md) | Generating contours inside Figma |
 | [Data sources](docs/data-sources.md) | Elevation models, licences, source selection, coastlines, CRS |
+| [Open national elevation models](docs/national-elevation-models.md) | Every open DTM we use: native resolution, licence, endpoint, access quirks ([CSV](data/national-elevation-models.csv)) |
 | [FAQ](docs/faq.md) | Licensing, commercial use, accuracy, limits |
 
 ## Feedback & feature requests
