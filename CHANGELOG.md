@@ -2,6 +2,11 @@
 
 Notable user-facing changes to TopoLines.
 
+## Automatic precision — October 2026
+
+- **National lidar down to 1 m** — HD traces now use the finest grid each national model allows for the zone, within a budget of about 3.5 million cells. France: IGN RGE ALTI at 1 m up to ~3.5 km², 2 m up to ~14 km², 5 m up to ~85 km². Switzerland goes down to 0.5 m; England, Austria, Germany and the US to 1 m. See [Data sources](docs/data-sources.md#automatic-precision).
+- **The source label names the grid used** — e.g. "IGN RGE ALTI 2 m", in the editor's Map info and in every export's metadata.
+
 ## Data documentation — October 2026
 
 - **USGS 3DEP is now labelled "up to 5 m"** — US zones are served on a 5 m grid from 1 m or 1/9″ lidar where it has been flown, and from the ~10 m product elsewhere.

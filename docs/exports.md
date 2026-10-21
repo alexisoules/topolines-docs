@@ -51,16 +51,16 @@ Paid exports run on **one-off credit packs** — there's no subscription, and **
 The cost of an export depends on:
 
 - the **area** of the zone (bigger zone = more data to process)
-- the **elevation resolution** (5–10 m national data costs more than the 30 m standard source)
+- the **elevation resolution** (national HD data costs more than the 30 m standard source)
 
 The exact credit cost is shown before you confirm an export, and your remaining balance is always visible in the editor.
 
 See [current packs and prices](https://www.topolines.app/pricing).
 
-## Resolution: standard 30 m vs national 5–10 m
+## Resolution: standard 30 m vs national HD
 
 - **GEDTM30 30 m** (free) — global bare-earth coverage, one sample every ~30 m. Good for regional relief and large zones.
-- **National 5–10 m** (paid) — up to six times finer, mostly lidar-derived, in France, the US, Spain, England, Austria, Switzerland, Italy, Bavaria and North Rhine-Westphalia (see [Data sources](data-sources.md)). Worth it for small zones and site work: a single valley, a building plot, a detailed coastline.
+- **National HD** (paid) — down to 1 m on small zones (0.5 m in Switzerland), coarser as the zone grows, mostly lidar-derived, in France, the US, Spain, England, Austria, Switzerland, Italy, Bavaria and North Rhine-Westphalia (see [Data sources](data-sources.md)). Worth it for small zones and site work: a single valley, a building plot, a detailed coastline.
 - **Your own DEM** (paid) — upload a GeoTIFF and trace contours on it directly, for survey data or areas the built-in sources don't cover.
 
 ## Area limits

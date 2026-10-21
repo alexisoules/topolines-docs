@@ -8,7 +8,7 @@ If your map includes OpenStreetMap-derived features (coastlines, annotations), c
 
 ### Do I need an account to try it?
 
-You need a free Google or GitHub sign-in — no payment. The free tier traces on GEDTM30 30 m and exports a real 1024 px PNG. Paid features (GeoJSON, DXF, SVG, HD PNG, 5–10 m data, your own DEM, larger areas) run on credits.
+You need a free Google or GitHub sign-in — no payment. The free tier traces on GEDTM30 30 m and exports a real 1024 px PNG. Paid features (GeoJSON, DXF, SVG, HD PNG, national data down to 1 m, your own DEM, larger areas) run on credits.
 
 ### Is it a subscription?
 
@@ -16,7 +16,7 @@ No. Credits are sold in one-off packs and **never expire**.
 
 ### How accurate is it?
 
-Contours are only as accurate as the elevation model behind them, and TopoLines tells you which one that is. The free tier uses GEDTM30 (30 m, bare-earth); paid tiers use national terrain models at 5–10 m, mostly lidar, where available. TopoLines published a check of GEDTM30 against national lidar at eight sites: under forest its RMSE was 5–18 m, on farmland and in cities 1–5 m — see [GEDTM30 vs lidar](https://www.topolines.app/blog/gedtm30-vs-lidar).
+Contours are only as accurate as the elevation model behind them, and TopoLines tells you which one that is. The free tier uses GEDTM30 (30 m, bare-earth); paid tiers use national terrain models, mostly lidar, where available — down to 1 m on small zones (0.5 m in Switzerland), coarser as the zone grows. TopoLines published a check of GEDTM30 against national lidar at eight sites: under forest its RMSE was 5–18 m, on farmland and in cities 1–5 m — see [GEDTM30 vs lidar](https://www.topolines.app/blog/gedtm30-vs-lidar).
 
 For preliminary studies, site context and mapping it is a fast, documented source. It is **not** a substitute for a topographic survey: don't use it alone for engineering design, construction or navigation.
 

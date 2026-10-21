@@ -30,10 +30,10 @@ Machine-readable version: [`data/national-elevation-models.csv`](../data/nationa
 
 ## Access quirks worth knowing
 
-- **France (IGN)** — the Géoplateforme WMS returns raw float32 elevations, not a shaded image, for `ELEVATION.ELEVATIONGRIDCOVERAGE.HIGHRES`. One GetMap answers a whole bounding box; no key.
-- **United States (USGS 3DEP)** — the ImageServer mosaic picks the best available source per pixel, so a 5 m request returns lidar-derived heights where flown and the 1/3″ product elsewhere. Sea and areas outside coverage come back as nodata.
+- **France (IGN)** — the Géoplateforme WMS returns raw float32 elevations, not a shaded image, for `ELEVATION.ELEVATIONGRIDCOVERAGE.HIGHRES` (the 1 m RGE ALTI). One GetMap answers a whole bounding box; no key. Measured October 2026: 3.5 Mpx answers in 1–6 s at 1, 2 or 5 m; a 4.2 Mpx request resampled to 5 m returned 504.
+- **United States (USGS 3DEP)** — the ImageServer mosaic picks the best available source per pixel, so a 1–5 m request returns lidar-derived heights where flown and the 1/3″ product elsewhere. Sea and areas outside coverage come back as nodata.
 - **Spain (IGN)** — coverage `Elevacion4258_5`. There is no void value: the sea and land outside Spain both come back as a flat 0, so mask them before tracing.
-- **England (EA)** — the WCS only behaves in its native CRS. Subset in eastings/northings with `SCALEFACTOR` (0.2 gives 5 m for a 6 × 6 km box in about a second); lon/lat subsets error or hang.
+- **England (EA)** — the WCS only behaves in its native CRS. Subset in eastings/northings with `SCALEFACTOR` (1 for the native 1 m; 0.2 gives 5 m for a 6 × 6 km box in about a second); lon/lat subsets error or hang.
 - **Switzerland (swisstopo)** — several survey years can exist for one tile; keep the newest. Tiles are kilometre-aligned, so they mosaic without resampling.
 - **Austria (BEV)** — 55 published tiles in EPSG:3035 with internal overviews: windowed reads at 5–20 m only pull a few MB. Nodata is −9999.
 - **Italy (INGV)** — served in UTM 32N for the whole country, eastern regions included.
